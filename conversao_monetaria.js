@@ -1,17 +1,34 @@
-console.log("Conversor de moedas");
-let escolha = prompt("Primeiro, deseja converter dólar ou real?").toLowerCase();
+function converter(){
+	console.log("Conversor de moedas");
+opcoes = `para qual opção deseja converter
+o valor digitado:
+1. dollar
+2. euro
+`;
 
-if (!isNaN(escolha)) {
-  console.log("Não vai não em");
-} else {
-  if (escolha === "dolar") {
-    let dolar = parseInt(prompt("Digite o valor para converter: "));
-    let conversao = dolar * 5;
-    console.log(`${dolar} dólar(es) convertido(s) para real dá ${conversao} real(ais)`);
-    
-  } else if (escolha === "real") {
-    let real = parseInt(prompt("Digite o valor para converter: "));
-    let conversao = real / 5;
-    console.log(`${real} real(ais) convertido(s) para dólar dá ${conversao} dólar(es)`);
-  }
-}
+	let escolha = prompt(opcoes).toLowerCase();
+	let value = parseInt(prompt("agora digite o valor: "));
+	
+	if(isNaN(value) == false){
+		valores = {
+			'dollar': value * 5,
+			'euro': value * 3
+		};
+		
+		switch (escolha){
+			case 'euro':
+				resultado = `${value} reais, convertidos para ${escolha} da: ${valores.euro} euros`;
+				console.log(resultado);
+				break;
+			case 'dollar':
+				resultado = `${value} reais, convertidos para ${escolha} da: ${valores.dollar} dolares`
+				console.log(resultado);
+				break;
+			}
+		}else{
+			console.log("freeza");
+		}
+	}
+	
+
+converter();
