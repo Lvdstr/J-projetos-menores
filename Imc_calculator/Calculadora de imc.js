@@ -36,7 +36,9 @@ function calcularIMC(altura, peso) {
   if (altura > 0 && peso > 0){
   	let imc = peso / (altura * altura);
   	imc_verify(altura, peso, imc);
-  } 
+  }else if (altura > 0 || peso > 0){
+		return "um dos valores digitado é igual a zero."
+  }
   else {
     return 'Altura e peso devem ser valores maiores doq zero chefe.';
   }
@@ -44,5 +46,4 @@ function calcularIMC(altura, peso) {
 
 var altura = parseFloat(prompt('Digite sua altura em metros:'));
 var peso = parseFloat(prompt('Digite seu peso em quilogramas:'));
-
 calcularIMC(altura, peso.toFixed(2));

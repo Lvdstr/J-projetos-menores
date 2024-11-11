@@ -10,12 +10,6 @@ function calczinha(value, value2, operator){
 	console.log(operations[operator]);
 }
 
-var number1 = Number(prompt("digite o primeiro numero: "));
-var number2 = Number(prompt("digite o segundo numero: "));
-var operator = prompt("agora escolha o operador: ");
-
-verificar_numero(number1, number2);
-
 //verifica se os numeros digitados são do 
 //tipo int
 function verificar_numero(number1, number2){
@@ -42,3 +36,8 @@ function verificar_operador(operator){
 	    console.log("O operador digitado não é válido");
 	}
 }
+
+var number1 = Number(prompt("digite o primeiro numero: "));
+var number2 = Number(prompt("digite o segundo numero: "));
+var operator = prompt("agora escolha o operador: ");
+verificar_numero(number1, number2);
