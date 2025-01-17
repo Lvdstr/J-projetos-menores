@@ -1,3 +1,7 @@
+/**
+ * converte um valor de uma moeda para 
+ * outra
+ */
 function converter(){
 	console.log("Conversor de moedas");
 	opcoes = `para qual opção deseja converter
@@ -25,10 +29,10 @@ o valor digitado:
 				console.log(resultado);
 				break;
 			}
-		}else{
-			console.log("freeza");
-		}
+	}else{
+		console.log("freeza");
 	}
-	
+}
+
 
 converter();

@@ -1,3 +1,7 @@
+/**
+ * se o valor for par, conta todos os números pares antes dele, se impar conta com números impares
+ * @param {*} value 
+ */
 function contador(value){
 	if(value == 1){
 		var number = prompt("digite um numero");
@@ -13,5 +17,6 @@ function contador(value){
 		}
 	}
 }
+
 
 contador(1);

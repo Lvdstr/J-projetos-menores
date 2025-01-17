@@ -6,6 +6,12 @@ let indice_imc = {
 	"obesidade_3": 40.00
 };
 
+/**
+ * exibição bonitinha so resultado
+ * @param {*} altura 
+ * @param {*} peso 
+ * @param {*} imc 
+ */
 function result(altura, peso, imc){
 	console.log(`
 altura: ${altura}
@@ -13,6 +19,12 @@ peso: ${peso}
 imc: ${imc.toFixed(2)}`)
 };
 
+/**
+ * calculo o imc da pessoa
+ * @param {float} altura 
+ * @param {float} peso 
+ * @param {float} imc 
+ */
 function imc_verify(altura, peso, imc){
 	let value = parseFloat(imc);
 	if(value.toFixed(2) <= indice_imc.peso_normal){
@@ -32,6 +44,14 @@ function imc_verify(altura, peso, imc){
 	}
 };
 
+
+/**
+ * verificar se os valores fornecidos são
+ * válidos para calcular o imc
+ * @param {float} altura 
+ * @param {float} peso 
+ * @returns avisos de erros
+ */
 function calcularIMC(altura, peso) {
   if (altura > 0 && peso > 0){
   	let imc = peso / (altura * altura);
@@ -43,6 +63,7 @@ function calcularIMC(altura, peso) {
     return 'Altura e peso devem ser valores maiores doq zero chefe.';
   }
 };
+
 
 var altura = parseFloat(prompt('Digite sua altura em metros:'));
 var peso = parseFloat(prompt('Digite seu peso em quilogramas:'));
